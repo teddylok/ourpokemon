@@ -20,6 +20,7 @@
     "karma-jasmine": "latest",
     "karma-cli": "latest",
     "less-loader": "latest",
+    "merge": "latest",
     "ngtemplate-loader": "latest",
     "raw-loader": "latest",
     "script-loader": "latest",
