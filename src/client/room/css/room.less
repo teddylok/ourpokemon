@@ -39,87 +39,11 @@
   }
 }
 
-.map-container {
-  display: block;
-  
-  TABLE {
-    margin-left: auto;
-    margin-right: auto;
-    
-    TR {
-      TD {
-        padding: 0;
-        border-color: @black-dark-color;
-        
-        &.trainer {
-          background-color: @pink-color;
-        }
-        
-        &.active {
-          border: 0.3rem solid red;
-        }
-
-        A {
-          color: @text-grey-color;
-          display: block;
-          padding: 0.5rem;
-          text-decoration: none;
-
-          &:hover {
-            color: @text-grey-color;
-            text-decoration: none;
-          }
-
-          .pokemon {
-            margin-right: auto;
-            margin-left: auto;
-          }
-
-          .progressbar {
-            word-break: normal;
-          }
-        }
-      }
-    }
-  }
-}
-
-.battle-nav-container {
-  background: @green-color;
-  height: 5rem;
-  color: @white-color;
-  font-size: 3rem;
-  line-height: 5rem;
-  position: fixed;
-  width: 100% !important;
-  bottom: 0;
-  z-index: 999999;
-  
-  &.active {
-    bottom: 5rem;
-  }
-
-  UL{
-    LI{
-      padding: 0;
-
-      A {
-        cursor: pointer;
-        color: @white-color;
-        text-decoration: none;
-        width: 100%;
-        line-height: 5rem;
-
-        &:hover, &:active, &:visited {
-          color: @white-color;
-          text-decoration: none;
-        }
-        
-        .pokemon-ball {
-          margin-bottom: 0.6rem;
-          width: 3.2rem;
-          height: 3.2rem;
-        }
+.room-container {
+  UL {
+    LI {
+      .btn {
+        border-width: 0.2rem;
       }
     }
   }
