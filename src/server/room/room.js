@@ -1,4 +1,5 @@
 var vsprintf = require("sprintf-js").vsprintf;
+var Lazy = require('../../../bower_components/lazy.js');
 
 module.exports = function () {
     var room = {

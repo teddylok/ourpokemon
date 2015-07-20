@@ -23,8 +23,6 @@ userService.createUser = function(username, password) {
         password
     ]));
     
-    console.log(username, user);
-    
     return user;
 };
 

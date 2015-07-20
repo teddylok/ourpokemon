@@ -28,8 +28,7 @@ angular.module('ourPokemon.battle')
 
             $socket.forward('updateBattle', $scope);
             $scope.$on('socket:updateBattle', function (event, battle) {
-                console.log('battle', battle);
-                $scope.map = battle.getMap();
+                $scope.map = battle.map;
             });
             
             $scope.click = function(x, y) {

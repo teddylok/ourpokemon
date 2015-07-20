@@ -1,3 +1,8 @@
+'use strict';
+
+var Lazy = require('../../../bower_components/lazy.js');
+var Merge = require('merge');
+
 module.exports = function () {
     var battle = {
         id: 0,
@@ -23,7 +28,21 @@ module.exports = function () {
     };
     
     battle.setTeam = function(team) {
+        if (battle.teams.length > 2) {
+            return false;
+        }
+
         battle.teams.push(team);
+
+        if (battle.teams.length == 1) {
+            for (var i = 0; i < 6; i++) {
+                if (team[i]) {
+                    battle.map[0][i] = Merge(battle.map[0][i], team[i]);
+                }
+            }
+        } else {
+            
+        }
     };
 
     battle.getTeams = function() {
