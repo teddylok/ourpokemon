@@ -1,0 +1,74 @@
+/**
+* Custom bootstrap CSS
+**/
+@import "../../../../../bower_components/bootstrap/less/variables";
+@import "../less";
+
+.btn {
+  border-bottom-width: 0.3rem;
+
+  &:hover {
+  }
+}
+
+.btn-default {
+  border-bottom-color: darken(@btn-default-border, 10%);
+
+  &:hover {
+  }
+}
+
+.btn-primary {
+  border-bottom-color: darken(@btn-primary-border, 10%);
+
+  &:hover {
+  }
+}
+
+.btn-success {
+  border-bottom-color: darken(@btn-success-border, 10%);
+
+  &:hover {
+  }
+}
+
+.btn-info {
+  border-bottom-color: darken(@btn-info-border, 10%);
+
+  &:hover {
+  }
+}
+
+.btn-warning {
+  border-bottom-color: darken(@btn-warning-border, 10%);
+
+  &:hover {
+  }
+}
+
+.btn-danger {
+  border-bottom-color: darken(@btn-danger-border, 10%);
+
+  &:hover {
+  }
+}
+
+.bs-searchbox {
+  padding: 0 0.5rem;
+}
+
+INPUT {
+  border: 0.2rem solid @btn-default-border;
+}
+
+.form-control {
+  border: 0.2rem solid @btn-default-border;
+  .box-shadow(0, 0, 0, 0);
+}
+
+.input-group {
+  .btn {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}

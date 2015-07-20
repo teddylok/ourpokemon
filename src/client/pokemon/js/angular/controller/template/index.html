@@ -1,0 +1,20 @@
+<div ng-include="'/app/header.html'"></div>
+
+<div class="pokemon-bag-container margin-top-50 margin-bottom-50">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div ng-repeat="pokemon in pokemonTeam">
+                    <div class="pokemon pokemon-{{ pokemon.number }}"></div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div ng-repeat="pokemon in pokemonBox">
+                    <div class="pokemon pokemon-{{ pokemon.number }}"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div ng-include="'/app/footer.html'"></div>

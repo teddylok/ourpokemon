@@ -1,0 +1,34 @@
+@import "../../app/css/less";
+@import "../../app/css/variable";
+
+.user-list-container {
+  UL {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border: 0.1rem solid @grey-color;
+    .border-radius();
+    overflow: scroll;
+    max-height: 60rem;
+
+    LI {
+      border-bottom: 0.1rem solid @grey-color;
+
+      SPAN {
+        display: block;
+        line-height: 4rem;
+        font-size: 2rem;
+        padding: 0 2rem;
+        color: @text-color;
+      }
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      .text-light-color {
+        color: @grey-color;
+      }
+    }
+  }
+}

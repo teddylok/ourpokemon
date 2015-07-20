@@ -1,0 +1,35 @@
+<div class="text-center padding-20">
+    <div class="sign-in-container padding-20">
+        <form class="form-sign-in" ng-submit="signIn()">
+            <div>
+                <h2 class="form-sign-in-heading">{{ 'app.name' | i18next }}</h2>
+            </div>
+
+            <div class="margin-top-20 margin-bottom-20">
+                <label for="username" class="sr-only">{{ 'signIn.username' | i18next }} ({{ 'signIn.required' | i18next }})</label>
+                <input type="text"
+                       id="username"
+                       name="username"
+                       ng-model="signInDetail.username"
+                       class="form-control"
+                       placeholder="{{ 'signIn.username' | i18next }}"
+                       autofocus="true"
+                       required="true">
+
+                <label for="password" class="sr-only">{{ 'signIn.password' | i18next }}</label>
+                <input type="password"
+                       id="password"
+                       name="password"
+                       ng-model="signInDetail.password"
+                       class="form-control"
+                       placeholder="{{ 'signIn.password' | i18next }}">
+            </div>
+
+            <div>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">
+                    {{ 'signIn.signIn' | i18next }}
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

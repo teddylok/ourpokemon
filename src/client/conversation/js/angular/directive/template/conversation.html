@@ -1,0 +1,21 @@
+<div class="chat-container">
+    <div class="conversations-container">
+        <div>
+            <op-conversation-messages messages="messages"></op-conversation-messages>
+        </div>
+        
+        <div class="send-message-container">
+            <form ng-submit="sendMessage()">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="New message ..." ng-model="message">
+                    
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit">
+                            <i class="fa fa-send-o"></i>
+                        </button>
+                    </span>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+.border-radius(@radius:0.5rem) {
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.border-radius-top(@radius:0.5rem) {
+  -moz-border-radius: @radius @radius 0 0;
+  -webkit-border-radius: @radius @radius 0 0;
+  border-radius: @radius @radius 0 0;
+}
+
+.border-radius-bottom(@radius:0.5rem) {
+  -moz-border-radius: 0 0 @radius @radius;
+  -webkit-border-radius: 0 0 @radius @radius;
+  border-radius: 0 0 @radius @radius;
+}
+
+.box-shadow(@x:0rem, @y:0rem, @blur:0.5rem, @color:#cccccc) {
+  -moz-box-shadow: @x @y @blur @color;
+  -webkit-box-shadow: @x @y @blur @color;
+  box-shadow: @x @y @blur @color;
+}
+
+.text-shadow(@x:0.2rem, @y:0.2rem, @blur:0.2rem, @color:#cccccc) {
+  text-shadow: @x @y @blur @color;
+}
+
+.opacity(@ratio:0.4) {
+  @ms-ratio: @ratio * 100;
+  filter: alpha(opacity=@ms-ratio);
+  opacity: @ratio;
+}
+
+.transition(@property:opacity, @duration:0.3s) {
+  -webkit-transition: @property @duration ease-in-out;
+  -moz-transition: @property @duration ease-in-out;
+  -ms-transition: @property @duration ease-in-out;
+  -o-transition: @property @duration ease-in-out;
+  transition: @property @duration ease-in-out;
+}
+
+.background-gradient(@top-color, @bottom-color) {
+  background-image: -webkit-gradient(
+          linear,
+          left top,
+          left bottom,
+          color-stop(0, @top-color),
+          color-stop(1, @bottom-color)
+  );
+  background-image: -o-linear-gradient(bottom, @top-color 0%, @bottom-color 100%);
+  background-image: -moz-linear-gradient(bottom, @top-color 0%, @bottom-color 100%);
+  background-image: -webkit-linear-gradient(bottom, @top-color 0%, @bottom-color 100%);
+  background-image: -ms-linear-gradient(bottom, @top-color 0%, @bottom-color 100%);
+  background-image: linear-gradient(to bottom, @top-color 0%, @bottom-color 100%);
+}

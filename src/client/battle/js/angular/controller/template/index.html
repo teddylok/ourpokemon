@@ -1,0 +1,49 @@
+<div class="battle-map-container margin-top-10 margin-bottom-50">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-1 col-lg-3 hidden-xs"></div>
+            <div class="col-xs-12 col-sm-10 col-lg-6">
+                <div>
+                    <table class="table table-bordered battle-map">
+                        <tr ng-repeat="grids in map">
+                            <td class="col-xs-2 text-center"
+                                ng-repeat="grid in grids"
+                                ng-class="{ 'active': selectedGrid && selectedGrid == grid }"
+                                ng-click="click(grid.x, grid.y)">
+                                <div ng-if="grid.number">
+                                    <div class="pokemon pokemon-{{ grid.number }}"></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="battle-pokemon-info-container padding-10" ng-if="selectedGrid">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <span>
+                                {{ 'pokemon.lv' | i18next }}:
+                                {{ selectedGrid.level }}
+                            </span>
+                            <span>
+                                {{ selectedGrid.jpName }}
+                            </span>
+                        </div>
+                        <div class="col-xs-6">
+                            <progressbar class="progressbar margin-0"
+                                         value="dynamic"
+                                         type="success">
+                                333 / 600
+                            </progressbar>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-1 col-lg-3 hidden-xs"></div>
+        </div>
+    </div>
+</div>
+
+<div ng-include="'/battle/control-panel.html'"></div>
+
+<div ng-include="'/app/footer.html'" ng-if="showMenu"></div>

@@ -1,0 +1,20 @@
+@import "../less";
+@import "../variable";
+
+.sign-in-container {
+  background: @white-color;
+  .border-radius();
+  .box-shadow();
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  INPUT[name="username"] {
+    .border-radius-top(0.5rem);
+  }
+
+  INPUT[name="password"] {
+    border-top: 0;
+    .border-radius-bottom(0.5rem);
+  }
+}

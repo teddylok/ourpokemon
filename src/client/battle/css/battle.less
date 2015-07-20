@@ -1,0 +1,81 @@
+@import "../../app/css/less";
+@import "../../app/css/variable";
+
+.battle-map-container {
+  display: block;
+  
+  TABLE.battle-map {
+    margin-left: auto;
+    margin-right: auto;
+    
+    background-color: @battle-map-color;
+    
+    TR {
+      TD {
+        padding: 0.5rem;
+        border: 0.3rem @battle-map-border-color dashed;
+        cursor: pointer;
+
+        &.trainer {
+
+        }
+
+        &.active {
+          background-color: @battle-map-active-color;
+        }
+
+        .pokemon {
+          margin-right: auto;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}
+
+.battle-pokemon-info-container {
+  background-color: @white-color;
+  .border-radius();
+  .box-shadow();
+}
+
+.control-panel-container {
+  background: @green-color;
+  height: 5rem;
+  color: @white-color;
+  font-size: 3rem;
+  line-height: 5rem;
+  position: fixed;
+  width: 100% !important;
+  bottom: 0;
+  z-index: 999999;
+  
+  &.active {
+    bottom: 5rem;
+  }
+
+  UL{
+    LI{
+      padding: 0;
+
+      A {
+        cursor: pointer;
+        color: @white-color;
+        text-decoration: none;
+        width: 100%;
+        line-height: 5rem;
+
+        &:hover, &:active, &:visited {
+          color: @white-color;
+          text-decoration: none;
+        }
+        
+        .pokemon-ball {
+          margin-bottom: 0.6rem;
+          width: 3.2rem;
+          height: 3.2rem;
+        }
+      }
+    }
+  }
+}

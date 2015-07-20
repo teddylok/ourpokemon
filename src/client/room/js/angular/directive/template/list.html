@@ -1,0 +1,30 @@
+<div class="room-list-container content-container padding-15">
+    <div>
+        <h3>{{ 'world.rooms' | i18next }}</h3>
+    </div>
+    
+    <ul>
+        <li ng-repeat="room in rooms">
+            <a ng-click="joinRoom(room.id)" class="text-center">
+                <span class="text-light-color pull-left">
+                    #{{ room.id }}
+                </span>
+                <span>
+                    {{ room.name }}
+                </span>
+            </a>
+        </li>
+    </ul>
+    
+    <form ng-submit="createRoom()">
+        <div class="input-group margin-top-20">
+            <input type="text" class="form-control" placeholder="{{ 'world.enterRoomName' | i18next }}" ng-model="newRoomName">
+            
+            <span class="input-group-btn">
+                <button class="btn btn-success" type="submit">
+                    <i class="fa fa-plus"></i>
+                </button>
+            </span>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,62 @@
+@import "../../app/css/less";
+@import "../../app/css/variable";
+
+.conversation-container {
+  display: block;
+}
+
+.chat-container {
+  background: @white-color;
+
+  .conversations-container {
+    UL.messages {
+
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      overflow: scroll;
+
+      LI.message {
+        font-size: 1.5rem;
+        padding: 1rem 2rem;
+
+        .author {
+          color: @blue-color;
+        }
+        
+        &:nth-child(odd) {
+          
+        }
+
+        &:nth-child(even) {
+          background: @grey-light-color;
+        }
+      }
+    }
+
+    .send-message-container {
+      background-color: @white-color;
+      border-top: 0.1rem @grey-color solid;
+      position: fixed;
+      bottom: 5rem;
+      width: 100%;
+      
+      INPUT[type="text"] {
+        border: 0;
+        .border-radius(0);
+        height: 5rem;
+        line-height: 5rem;
+        font-size: 2.5rem;
+        .box-shadow(0, 0, 0, 0);
+      }
+      
+      .btn {
+        .border-radius(0);
+        border: 0;
+        height: 5rem;
+        line-height: 3rem;
+        font-size: 3rem;
+      }
+    }
+  }
+}

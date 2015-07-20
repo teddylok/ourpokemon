@@ -1,0 +1,57 @@
+@pokemon-icon-width: 32px;
+@pokemon-icon-height: 32px;
+
+.pokemon {
+  width: @pokemon-icon-width;
+  height: @pokemon-icon-height;
+}
+
+.pokemon-0 {
+  background: url("/pokemon/pokeball.png");
+}
+
+// pokemons
+.image-position(@pokemonNumber, @maxRow) {
+
+  @pkm: @pokemonNumber - 1;
+
+  @x: mod(@pkm, @maxRow) * @pokemon-icon-width;
+  @y: floor(@pkm / @maxRow) * @pokemon-icon-height;
+
+  background-position: -@x -@y;
+}
+
+.generatePokemons(@pokemonNumber, @pokemonEndNumber, @maxRow) when (@pokemonEndNumber >= @pokemonNumber) {
+
+  .pokemon-@{pokemonNumber} {
+    background: url("/pokemon/pokemons.png");
+    .image-position(@pokemonNumber, @maxRow);
+  }
+
+  .generatePokemons((@pokemonNumber + 1), @pokemonEndNumber, @maxRow);
+}
+
+//.generatePokemons(1, 718, 25);
+
+// pokemons left
+.image-position-left(@pokemonNumber, @maxRow) {
+
+  @pkm: @pokemonNumber - 1;
+
+  @x: (@maxRow - 1 - mod(@pkm, @maxRow)) * @pokemon-icon-width;
+  @y: floor(@pkm / @maxRow) * @pokemon-icon-height;
+
+  background-position: -@x -@y;
+}
+
+.generatePokemonsLeft(@pokemonNumber, @pokemonEndNumber, @maxRow) when (@pokemonEndNumber >= @pokemonNumber) {
+
+  .pokemon-left-@{pokemonNumber} {
+    background: url("/pokemon/pokemons_left.png");
+    .image-position-left(@pokemonNumber, @maxRow);
+  }
+
+  .generatePokemonsLeft((@pokemonNumber + 1), @pokemonEndNumber, @maxRow);
+}
+
+.generatePokemonsLeft(1, 718, 25);

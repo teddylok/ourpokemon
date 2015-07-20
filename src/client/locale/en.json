@@ -1,0 +1,33 @@
+{
+  "app": {
+    "name": "Our Pokemon",
+    "homepage": ""
+  },
+  "signIn": {
+    "signIn": "Sign in",
+    "username": "Username",
+    "password": "Password",
+    "required": "Required"
+  },
+  "world": {
+    "rooms": "Rooms",
+    "enterRoomName": "Enter room name",
+    "users": "Users"
+  },
+  "conversation": {
+    "chatRoom": "Chat room"
+  },
+  "pokemon": {
+    "lv": "LV"
+  },
+  "room": {
+    "wildBattle": "Wild battle",
+    "leaveRoom": "Leave room"
+  },
+  "battle": {
+    "team1": "Team 1",
+    "team2": "Team 2",
+    "battle": "Battle"
+  },
+  "start": "Start"
+}

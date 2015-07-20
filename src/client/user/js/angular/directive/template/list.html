@@ -1,0 +1,13 @@
+<div class="user-list-container content-container padding-15">
+    <div>
+        <h3>{{ 'world.users' | i18next }}</h3>
+    </div>
+
+    <ul>
+        <li ng-repeat="user in users">
+            <span>
+                {{ user.username }}
+            </span>
+        </li>
+    </ul>
+</div>

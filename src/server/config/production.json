@@ -1,0 +1,12 @@
+{
+  "server": {
+    "name": "Our Pokemon",
+    "ip": "ourPokemon.net",
+    "port": 8888
+  },
+  "database": {
+    "ip": "ourPokemon.net",
+    "username": "op",
+    "password": "op"
+  }
+}

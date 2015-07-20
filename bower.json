@@ -1,0 +1,41 @@
+{
+  "name": "Our Pokemon",
+  "version": "0.0.1",
+  "authors": [
+    "Teddy Lok"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.ourpokemon.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.0",
+    "angular-animate": "~1.4.0",
+    "angular-bindonce": "~0.3.3",
+    "angular-bootstrap": "~0.13.0",
+    "angular-busy": "~4.1.0",
+    "angular-route": "~1.4.0",
+    "angular-cookies": "~1.4.0",
+    "angular-sanitize": "~1.4.0",
+    "angular-elastic": "~2.4.2",
+    "angular-moment": "0.10.1",
+    "bootstrap": "~3.3.4",
+    "font-awesome": "~4.3.0",
+    "ng-i18next": "~0.5.2",
+    "jquery": "~2.1.1",
+    "json2-js": "~1.0.0",
+    "lazy.js": "~0.4.0",
+    "ngBootbox": "~0.0.5",
+    "nya-bootstrap-select": "~2.0.10",
+    "q": "~1.0.1",
+    "wow": "~1.1.2",
+    "animate.css": "~3.2.5",
+    "es5-shim": "*",
+    "angular-socket-io": "0.7.0"
+  }
+}
